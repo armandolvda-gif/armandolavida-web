@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="alv-rg" x1="78%" y1="3%" x2="22%" y2="97%">
+      <stop offset="0%"   stop-color="#FFF0A0"/>
+      <stop offset="10%"  stop-color="#F4DF72"/>
+      <stop offset="28%"  stop-color="#D4AF37"/>
+      <stop offset="58%"  stop-color="#9C7620"/>
+      <stop offset="100%" stop-color="#4A2808"/>
+    </linearGradient>
+    <linearGradient id="alv-rh" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#FFFCE0" stop-opacity="0"/>
+      <stop offset="28%"  stop-color="#FFF8C0" stop-opacity="0.82"/>
+      <stop offset="50%"  stop-color="#FFFFFF"  stop-opacity="0.94"/>
+      <stop offset="72%"  stop-color="#FFF8C0" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#FFFCE0" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="alv-sg" cx="32%" cy="27%" r="65%" fx="24%" fy="20%">
+      <stop offset="0%"   stop-color="#FFFCE8"/>
+      <stop offset="18%"  stop-color="#FAE878"/>
+      <stop offset="42%"  stop-color="#D4AF37"/>
+      <stop offset="78%"  stop-color="#9A7020"/>
+      <stop offset="100%" stop-color="#5A3C08"/>
+    </radialGradient>
+    <linearGradient id="alv-pg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#E8C840"/>
+      <stop offset="55%"  stop-color="#BF9620"/>
+      <stop offset="100%" stop-color="#7A5808"/>
+    </linearGradient>
+    <linearGradient id="alv-stg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#D8B030"/>
+      <stop offset="38%"  stop-color="#C09820"/>
+      <stop offset="100%" stop-color="#7A5808"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ring body -->
+  <path d="M 55.3 153.9 L 65.3 164.3 A 82 82 0 1 1 134.7 164.3 L 144.7 153.9 L 152.3 142.3 A 74 74 0 1 0 47.7 142.3 Z" fill="url(#alv-rg)"/>
+  <!-- Outer-edge highlight arc -->
+  <path d="M 29.9 49.5 A 81 81 0 0 1 170.1 49.5" stroke="url(#alv-rh)" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- Inner-edge subtle reflection -->
+  <path d="M 35.1 52.5 A 75 75 0 0 1 165.0 52.5" stroke="#FFF5C0" stroke-width="0.8" stroke-linecap="round" opacity="0.42"/>
+  <!-- Sphere -->
+  <circle cx="100" cy="90" r="9.5" fill="url(#alv-sg)"/>
+  <ellipse cx="97" cy="87" rx="2.6" ry="2.0" fill="#FFFCE8" opacity="0.72"/>
+  <!-- Staff -->
+  <rect x="98.8" y="99.5" width="2.4" height="43.5" rx="0.5" fill="url(#alv-stg)"/>
+  <!-- Pyramid -->
+  <rect x="91"  y="143"   width="18" height="4.5" rx="0.5" fill="url(#alv-pg)"/>
+  <rect x="92"  y="147.5" width="16" height="0.7" fill="#2E1604" opacity="0.38"/>
+  <rect x="84"  y="148.5" width="32" height="4.5" rx="0.5" fill="url(#alv-pg)"/>
+  <rect x="85"  y="153"   width="30" height="0.7" fill="#2E1604" opacity="0.38"/>
+  <rect x="78"  y="154"   width="44" height="4.5" rx="0.5" fill="url(#alv-pg)"/>
+  <rect x="79"  y="158.5" width="42" height="0.7" fill="#2E1604" opacity="0.38"/>
+  <rect x="72"  y="159.5" width="56" height="4.5" rx="0.5" fill="url(#alv-pg)"/>
+  <rect x="73"  y="164"   width="54" height="0.7" fill="#2E1604" opacity="0.38"/>
+</svg>

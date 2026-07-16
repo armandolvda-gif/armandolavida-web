@@ -19,8 +19,11 @@
 <meta name="twitter:title" content="Método Pausa y Poder — Armando La Vida"/>
 <meta name="twitter:description" content="Un método para aprender a acompañarte con honestidad y dejar de escapar de ti mismo."/>
 
-<!-- ── FAVICON: subir archivo y descomentar ── -->
-<!-- <link rel="icon" href="/favicon.png" type="image/png"/> -->
+<!-- ── FAVICON ── -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -339,19 +342,110 @@ footer{
 </head>
 <body>
 
+<!-- ── ALV ICON SYMBOL (shared defs, hidden) ─────────────────────── -->
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+     style="position:absolute;width:0;height:0;overflow:hidden;pointer-events:none">
+  <defs>
+    <!-- Ring body: metallic sweep bright upper-right → deep shadow lower-left -->
+    <linearGradient id="alv-rg" x1="78%" y1="3%" x2="22%" y2="97%">
+      <stop offset="0%"   stop-color="#FFF0A0"/>
+      <stop offset="10%"  stop-color="#F4DF72"/>
+      <stop offset="28%"  stop-color="#D4AF37"/>
+      <stop offset="58%"  stop-color="#9C7620"/>
+      <stop offset="100%" stop-color="#4A2808"/>
+    </linearGradient>
+    <!-- Ring outer-edge highlight arc: bright crest at top, fades to transparent at ends -->
+    <linearGradient id="alv-rh" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#FFFCE0" stop-opacity="0"/>
+      <stop offset="28%"  stop-color="#FFF8C0" stop-opacity="0.82"/>
+      <stop offset="50%"  stop-color="#FFFFFF"  stop-opacity="0.94"/>
+      <stop offset="72%"  stop-color="#FFF8C0" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#FFFCE0" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Sphere: radial gradient with tight specular focus -->
+    <radialGradient id="alv-sg" cx="32%" cy="27%" r="65%" fx="24%" fy="20%">
+      <stop offset="0%"   stop-color="#FFFCE8"/>
+      <stop offset="18%"  stop-color="#FAE878"/>
+      <stop offset="42%"  stop-color="#D4AF37"/>
+      <stop offset="78%"  stop-color="#9A7020"/>
+      <stop offset="100%" stop-color="#5A3C08"/>
+    </radialGradient>
+    <!-- Pyramid steps: top-lit metallic -->
+    <linearGradient id="alv-pg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#E8C840"/>
+      <stop offset="55%"  stop-color="#BF9620"/>
+      <stop offset="100%" stop-color="#7A5808"/>
+    </linearGradient>
+    <!-- Staff: horizontal gradient for cylindrical effect -->
+    <linearGradient id="alv-stg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#D8B030"/>
+      <stop offset="38%"  stop-color="#C09820"/>
+      <stop offset="100%" stop-color="#7A5808"/>
+    </linearGradient>
+
+    <symbol id="alv-sym" viewBox="0 0 200 200" fill="none">
+      <!--
+        3D METALLIC ALV SYMBOL
+        Ring center (100,90) · outer r=82 · inner r=74 · band=8px
+        Gap 70° at bottom. Taper 10° each side.
+        Left tip  125°,r78 → (55.3,153.9)    L-outer 115°,r82 → (65.3,164.3)
+        R-outer    65°,r82 → (134.7,164.3)   Right tip 55°,r78 → (144.7,153.9)
+        R-inner    45°,r74 → (152.3,142.3)   L-inner 135°,r74 → (47.7,142.3)
+        Highlight arc r=81: 210°→(29.9,49.5) CW→ 330°→(170.1,49.5)
+        Inner reflection r=75: 210°→(35.1,52.5) CW→ 330°→(165.0,52.5)
+      -->
+
+
+      <!-- ── RING ── -->
+      <!-- Ring body with metallic gradient -->
+      <path d="M 55.3 153.9
+               L 65.3 164.3
+               A 82 82 0 1 1 134.7 164.3
+               L 144.7 153.9
+               L 152.3 142.3
+               A 74 74 0 1 0 47.7 142.3
+               Z"
+            fill="url(#alv-rg)"/>
+      <!-- Outer-edge metallic highlight: arc on r=81, CW from 210° through top (270°) to 330° -->
+      <path d="M 29.9 49.5 A 81 81 0 0 1 170.1 49.5"
+            stroke="url(#alv-rh)" stroke-width="1.6" stroke-linecap="round"/>
+      <!-- Inner-edge subtle reflection -->
+      <path d="M 35.1 52.5 A 75 75 0 0 1 165.0 52.5"
+            stroke="#FFF5C0" stroke-width="0.8" stroke-linecap="round" opacity="0.42"/>
+
+      <!-- ── SPHERE — centred at ring centre (100,90) ── -->
+      <circle cx="100" cy="90" r="9.5" fill="url(#alv-sg)"/>
+      <!-- Specular highlight centred above sphere centre -->
+      <ellipse cx="97" cy="87" rx="2.6" ry="2.0" fill="#FFFCE8" opacity="0.72"/>
+
+      <!-- ── STAFF — from sphere bottom (y=99.5) to pyramid tip (y=143) ── -->
+      <rect x="98.8" y="99.5" width="2.4" height="43.5" rx="0.5" fill="url(#alv-stg)"/>
+
+      <!-- ── PYRAMID — fills the ring gap exactly ──
+           Punta (step 1 top)  y=143  → just below inner arc endpoints (y=142.3)
+           Base  (step 4 bot)  y=164  → aligned with outer arc endpoints (y=164.3)
+           4 steps × 4.5px + 3 gaps × 1px = 21px total height
+      -->
+      <!-- Step 1 (punta — narrowest) -->
+      <rect x="91"  y="143"   width="18" height="4.5" rx="0.5" fill="url(#alv-pg)"/>
+      <rect x="92"  y="147.5" width="16" height="0.7" fill="#2E1604" opacity="0.38"/>
+      <!-- Step 2 -->
+      <rect x="84"  y="148.5" width="32" height="4.5" rx="0.5" fill="url(#alv-pg)"/>
+      <rect x="85"  y="153"   width="30" height="0.7" fill="#2E1604" opacity="0.38"/>
+      <!-- Step 3 -->
+      <rect x="78"  y="154"   width="44" height="4.5" rx="0.5" fill="url(#alv-pg)"/>
+      <rect x="79"  y="158.5" width="42" height="0.7" fill="#2E1604" opacity="0.38"/>
+      <!-- Step 4 (base — widest, bottom aligned with outer arc y=164) -->
+      <rect x="72"  y="159.5" width="56" height="4.5" rx="0.5" fill="url(#alv-pg)"/>
+      <rect x="73"  y="164"   width="54" height="0.7" fill="#2E1604" opacity="0.38"/>
+    </symbol>
+  </defs>
+</svg>
+
 <!-- ── NAV ──────────────────────────────────────────────────────────── -->
 <nav id="nb">
   <a href="/" class="nav-logo"><!-- actualizado: era href="#" -->
-    <svg class="alv-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="42" r="30" fill="none" stroke="#D4AF37" stroke-width="2.4" stroke-dasharray="169.5 19" stroke-dashoffset="132" stroke-linecap="round"/>
-      <circle cx="50" cy="38" r="5" fill="#D4AF37"/>
-      <line x1="50" y1="43" x2="50" y2="72" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round"/>
-      <rect x="46"  y="74"  width="8"  height="2.2" rx=".5" fill="#D4AF37"/>
-      <rect x="43"  y="78"  width="14" height="2.2" rx=".5" fill="#D4AF37"/>
-      <rect x="40"  y="82"  width="20" height="2.2" rx=".5" fill="#D4AF37"/>
-      <rect x="37"  y="86"  width="26" height="2.2" rx=".5" fill="#D4AF37"/>
-      <rect x="34"  y="90"  width="32" height="2.2" rx=".5" fill="#D4AF37"/>
-    </svg>
+    <svg class="alv-icon" aria-hidden="true"><use href="#alv-sym"/></svg>
     <span class="nav-wordmark">
       <span class="nm-main">ARMANDO</span>
       <span class="nm-sub">LA VIDA</span>
@@ -368,16 +462,7 @@ footer{
 <!-- ── HERO ─────────────────────────────────────────────────────────── -->
 <section id="hero">
   <div class="hero-icon fade-up">
-    <svg class="alv-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="42" r="30" fill="none" stroke="#D4AF37" stroke-width="2.4" stroke-dasharray="169.5 19" stroke-dashoffset="132" stroke-linecap="round"/>
-      <circle cx="50" cy="38" r="5" fill="#D4AF37"/>
-      <line x1="50" y1="43" x2="50" y2="72" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round"/>
-      <rect x="46"  y="74"  width="8"  height="2.2" rx=".5" fill="#D4AF37"/>
-      <rect x="43"  y="78"  width="14" height="2.2" rx=".5" fill="#D4AF37"/>
-      <rect x="40"  y="82"  width="20" height="2.2" rx=".5" fill="#D4AF37"/>
-      <rect x="37"  y="86"  width="26" height="2.2" rx=".5" fill="#D4AF37"/>
-      <rect x="34"  y="90"  width="32" height="2.2" rx=".5" fill="#D4AF37"/>
-    </svg>
+    <svg class="alv-icon" aria-hidden="true"><use href="#alv-sym"/></svg>
   </div>
   <p class="hero-pretitle fade-up d1">El Método</p>
   <h1 class="hero-title fade-up d2">
@@ -522,16 +607,7 @@ footer{
           Ejemplo de implementación:
           <img src="/img/armando-foto.jpg" alt="Armando La Vida" style="width:100%;height:100%;object-fit:cover;"/>
         -->
-        <svg class="alv-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M 59.8,72.2 A 30,30 0 1,0 40.2,72.2" stroke="#C4A45A" stroke-width="2.1" stroke-linecap="round"/>
-          <circle cx="50" cy="28" r="4" fill="#C4A45A"/>
-          <line x1="50" y1="32" x2="50" y2="72.5" stroke="#C4A45A" stroke-width="1.5" stroke-linecap="round"/>
-          <rect x="46.5" y="74.5" width="7" height="2" rx=".5" fill="#C4A45A"/>
-          <rect x="44" y="78.2" width="12" height="2" rx=".5" fill="#C4A45A"/>
-          <rect x="41" y="81.8" width="18" height="2" rx=".5" fill="#C4A45A"/>
-          <rect x="37.8" y="85.5" width="24.4" height="2" rx=".5" fill="#C4A45A"/>
-          <rect x="34.5" y="89.1" width="31" height="2" rx=".5" fill="#C4A45A"/>
-        </svg>
+        <svg class="alv-icon" aria-hidden="true"><use href="#alv-sym"/></svg>
       </div>
       <div class="about-meta">
         <span class="about-n">Armando La Vida</span>
@@ -595,16 +671,7 @@ footer{
 <!-- ── FOOTER ─────────────────────────────────────────────────────── -->
 <footer>
   <a href="/" class="foot-logo"><!-- actualizado: era href="#" -->
-    <svg class="alv-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="42" r="30" fill="none" stroke="#D4AF37" stroke-width="2.4" stroke-dasharray="169.5 19" stroke-dashoffset="132" stroke-linecap="round"/>
-      <circle cx="50" cy="38" r="5" fill="#D4AF37"/>
-      <line x1="50" y1="43" x2="50" y2="72" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round"/>
-      <rect x="46"  y="74"  width="8"  height="2.2" rx=".5" fill="#D4AF37"/>
-      <rect x="43"  y="78"  width="14" height="2.2" rx=".5" fill="#D4AF37"/>
-      <rect x="40"  y="82"  width="20" height="2.2" rx=".5" fill="#D4AF37"/>
-      <rect x="37"  y="86"  width="26" height="2.2" rx=".5" fill="#D4AF37"/>
-      <rect x="34"  y="90"  width="32" height="2.2" rx=".5" fill="#D4AF37"/>
-    </svg>
+    <svg class="alv-icon" aria-hidden="true"><use href="#alv-sym"/></svg>
     <span>ARMANDO LA VIDA</span>
   </a>
   <div class="foot-social">
