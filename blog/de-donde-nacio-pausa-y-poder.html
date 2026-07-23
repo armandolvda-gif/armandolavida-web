@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>De dónde nació Pausa y Poder — Armando La Vida</title>
+<meta name="description" content="Hay momentos en los que me he sentido vacío. Sin ganas. Sin fuerza. Sin nada que entregar. De ese proceso nació Pausa y Poder."/>
+<meta property="og:title" content="De dónde nació Pausa y Poder — Armando La Vida"/>
+<meta property="og:description" content="Hay momentos en los que me he sentido vacío. Sin ganas. Sin fuerza. Sin nada que entregar. De ese proceso nació Pausa y Poder."/>
+<meta property="og:image" content="https://www.armandolavida.com/img/armando-og.jpg"/>
+<meta property="og:url" content="https://www.armandolavida.com/blog/de-donde-nacio-pausa-y-poder"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="es_ES"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.armandolavida.com/img/armando-og.jpg"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+:root{
+  --marfil:    #F7F4EE;
+  --marfil2:   #EDE8DF;
+  --marfil3:   #E5DED3;
+  --carbon:    #1A1A1A;
+  --oro:       #D4AF37;
+  --oro-light: #E2C860;
+  --oro-dim:   rgba(212,175,55,0.22);
+  --oro-line:  rgba(212,175,55,0.32);
+  --piedra:    #D6D2C9;
+  --text-muted:#7A7060;
+  --text-dim:  #A09080;
+  --max:       1100px;
+  --read:      680px;
+  --serif:     'Cinzel', serif;
+  --sans:      'Montserrat', sans-serif;
+}
+body{background:var(--marfil);color:var(--carbon);font-family:var(--sans);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--marfil);}
+::-webkit-scrollbar-thumb{background:var(--oro-dim);border-radius:3px;}
+.container{max-width:var(--max);margin:0 auto;padding:0 32px;}
+.label{display:block;font-size:.65rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--oro);margin-bottom:18px;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:20px 40px;display:flex;align-items:center;justify-content:space-between;
+  background:rgba(247,244,238,0);transition:all .4s;
+}
+nav.scrolled{
+  background:rgba(247,244,238,0.95);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--oro-line);padding:14px 40px;
+}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo .alv-icon{width:34px;height:34px;flex-shrink:0;}
+.nav-wordmark{display:flex;flex-direction:column;line-height:1.15;}
+.nav-wordmark .nm-main{font-family:var(--serif);font-size:.82rem;letter-spacing:.18em;color:var(--carbon);font-weight:400;}
+.nav-wordmark .nm-sub{font-family:var(--serif);font-size:.58rem;letter-spacing:.26em;color:var(--oro);font-weight:400;}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{font-size:.65rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;transition:color .25s;}
+.nav-links a:hover,.nav-links a.active{color:var(--oro);}
+.nav-cta{font-size:.65rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--marfil);background:var(--carbon);padding:10px 22px;text-decoration:none;transition:background .25s;}
+.nav-cta:hover{background:var(--oro);}
+
+/* ── POST HEADER ── */
+.post-header{
+  padding:140px 32px 72px;background:var(--marfil);text-align:center;
+  border-bottom:1px solid var(--piedra);
+}
+.post-header .label{text-align:center;}
+.post-title{
+  font-family:var(--serif);font-size:clamp(1.8rem,4vw,3.2rem);
+  font-weight:400;letter-spacing:.04em;line-height:1.2;
+  color:var(--carbon);max-width:700px;margin:0 auto 22px;
+}
+.post-meta{
+  font-size:.65rem;font-weight:500;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--text-dim);
+}
+.post-rule{width:36px;height:1px;background:var(--oro);margin:28px auto 0;}
+
+/* ── POST BODY ── */
+.post-body{padding:72px 32px 100px;}
+.post-content{max-width:var(--read);margin:0 auto;}
+.post-content p{
+  font-size:1rem;font-weight:300;line-height:1.95;
+  color:var(--text-muted);margin-bottom:1.6rem;
+}
+.post-content p strong{color:var(--carbon);font-weight:400;}
+.post-content p em{font-style:italic;color:var(--carbon);}
+
+/* Fragment lines: belong together, less space after */
+.post-content .frags{margin-bottom:1.6rem;}
+.post-content .frags p{margin-bottom:.3rem;line-height:1.7;}
+.post-content .frags p:last-child{margin-bottom:0;}
+
+/* Pull / emphasis line */
+.post-content .pull{
+  font-family:var(--serif);font-style:italic;
+  font-size:clamp(1rem,2vw,1.2rem);
+  color:var(--carbon);letter-spacing:.02em;
+  border-left:2px solid var(--oro);
+  padding:4px 0 4px 22px;
+  margin:2.2rem 0;
+  line-height:1.6;
+}
+
+/* Closing line */
+.post-content .closing{
+  font-family:var(--serif);font-size:.88rem;
+  letter-spacing:.1em;color:var(--oro);
+  text-align:center;margin-top:3rem;padding-top:2rem;
+  border-top:1px solid var(--piedra);
+}
+
+/* ── POST FOOTER NAV ── */
+.post-nav{
+  background:var(--marfil2);border-top:1px solid var(--piedra);
+  padding:48px 32px;text-align:center;
+}
+.back-link{
+  font-size:.68rem;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--text-muted);
+  text-decoration:none;transition:color .25s;
+}
+.back-link:hover{color:var(--oro);}
+.back-link span{margin-right:8px;color:var(--oro);}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--carbon);border-top:1px solid rgba(196,164,90,.18);
+  padding:40px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;
+}
+.foot-logo{display:flex;align-items:center;gap:11px;text-decoration:none;}
+.foot-logo .alv-icon{width:28px;height:28px;}
+.foot-logo span{font-family:var(--serif);font-size:.76rem;letter-spacing:.12em;color:rgba(247,244,238,.5);}
+.foot-social{display:flex;gap:22px;}
+.foot-social a{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,244,238,.42);text-decoration:none;transition:color .25s;}
+.foot-social a:hover{color:var(--oro);}
+.foot-copy{width:100%;text-align:center;font-size:.62rem;color:rgba(247,244,238,.26);letter-spacing:.06em;margin-top:10px;border-top:1px solid rgba(255,255,255,.04);padding-top:18px;}
+
+@media(max-width:900px){
+  nav{padding:16px 20px;}nav.scrolled{padding:12px 20px;}
+  .nav-links{display:none;}
+}
+@media(max-width:500px){
+  footer{justify-content:center;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- ── ALV ICON SYMBOL ── -->
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+     style="position:absolute;width:0;height:0;overflow:hidden;pointer-events:none">
+  <defs>
+    <linearGradient id="alv-rg" x1="78%" y1="3%" x2="22%" y2="97%">
+      <stop offset="0%"   stop-color="#FFF0A0"/>
+      <stop offset="10%"  stop-color="#F4DF72"/>
+      <stop offset="28%"  stop-color="#D4AF37"/>
+      <stop offset="58%"  stop-color="#9C7620"/>
+      <stop offset="100%" stop-color="#4A2808"/>
+    </linearGradient>
+    <linearGradient id="alv-rh" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#FFFCE0" stop-opacity="0"/>
+      <stop offset="28%"  stop-color="#FFF8C0" stop-opacity="0.82"/>
+      <stop offset="50%"  stop-color="#FFFFFF"  stop-opacity="0.94"/>
+      <stop offset="72%"  stop-color="#FFF8C0" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#FFFCE0" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="alv-sg" cx="32%" cy="27%" r="65%" fx="24%" fy="20%">
+      <stop offset="0%"   stop-color="#FFFCE8"/>
+      <stop offset="18%"  stop-color="#FAE878"/>
+      <stop offset="42%"  stop-color="#D4AF37"/>
+      <stop offset="78%"  stop-color="#9A7020"/>
+      <stop offset="100%" stop-color="#5A3C08"/>
+    </radialGradient>
+    <linearGradient id="alv-pg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#E8C840"/>
+      <stop offset="55%"  stop-color="#BF9620"/>
+      <stop offset="100%" stop-color="#7A5808"/>
+    </linearGradient>
+    <linearGradient id="alv-stg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#D8B030"/>
+      <stop offset="38%"  stop-color="#C09820"/>
+      <stop offset="100%" stop-color="#7A5808"/>
+    </linearGradient>
+    <symbol id="alv-sym" viewBox="0 0 200 200" fill="none">
+      <path d="M 55.3 153.9 L 65.3 164.3 A 82 82 0 1 1 134.7 164.3 L 144.7 153.9 L 152.3 142.3 A 74 74 0 1 0 47.7 142.3 Z" fill="url(#alv-rg)"/>
+      <path d="M 29.9 49.5 A 81 81 0 0 1 170.1 49.5" stroke="url(#alv-rh)" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M 35.1 52.5 A 75 75 0 0 1 165.0 52.5" stroke="#FFF5C0" stroke-width="0.8" stroke-linecap="round" opacity="0.42"/>
+      <circle cx="100" cy="90" r="9.5" fill="url(#alv-sg)"/>
+      <ellipse cx="97" cy="87" rx="2.6" ry="2.0" fill="#FFFCE8" opacity="0.72"/>
+      <rect x="98.8" y="99.5" width="2.4" height="43.5" rx="0.5" fill="url(#alv-stg)"/>
+      <rect x="91"  y="143"   width="18" height="4.5" rx="0.5" fill="url(#alv-pg)"/>
+      <rect x="92"  y="147.5" width="16" height="0.7" fill="#2E1604" opacity="0.38"/>
+      <rect x="84"  y="148.5" width="32" height="4.5" rx="0.5" fill="url(#alv-pg)"/>
+      <rect x="85"  y="153"   width="30" height="0.7" fill="#2E1604" opacity="0.38"/>
+      <rect x="78"  y="154"   width="44" height="4.5" rx="0.5" fill="url(#alv-pg)"/>
+      <rect x="79"  y="158.5" width="42" height="0.7" fill="#2E1604" opacity="0.38"/>
+      <rect x="72"  y="159.5" width="56" height="4.5" rx="0.5" fill="url(#alv-pg)"/>
+      <rect x="73"  y="164"   width="54" height="0.7" fill="#2E1604" opacity="0.38"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ── NAV ── -->
+<nav id="nb">
+  <a href="/" class="nav-logo">
+    <svg class="alv-icon" aria-hidden="true"><use href="#alv-sym"/></svg>
+    <span class="nav-wordmark">
+      <span class="nm-main">ARMANDO</span>
+      <span class="nm-sub">LA VIDA</span>
+    </span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#what">El Método</a></li>
+    <li><a href="/blog" class="active">Reflexiones</a></li>
+    <li><a href="/#about">Sobre Armando</a></li>
+  </ul>
+  <a href="/#cta" class="nav-cta">Comenzar</a>
+</nav>
+
+<!-- ── POST HEADER ── -->
+<header class="post-header">
+  <span class="label">Reflexiones</span>
+  <h1 class="post-title">De dónde nació Pausa y Poder</h1>
+  <p class="post-meta">Julio 2026 &nbsp;·&nbsp; Armando La Vida</p>
+  <div class="post-rule"></div>
+</header>
+
+<!-- ── POST BODY ── -->
+<main class="post-body">
+  <article class="post-content">
+
+    <div class="frags">
+      <p>Hay momentos en los que me he sentido vacío.</p>
+      <p>Sin ganas.</p>
+      <p>Sin fuerza.</p>
+      <p>Sin nada que entregar.</p>
+    </div>
+
+    <p>Y cuando me pasa eso, suele aparecer una conversación muy dura conmigo mismo. Una voz que me cuestiona, que me hace sentir que nada de lo que he hecho vale suficiente.</p>
+
+    <p>A veces, cuando estoy metido en esa conversación, se me olvida todo el camino recorrido. Se me olvida lo que he tenido que atravesar para llegar hasta aquí. Se me olvida la fuerza que he tenido que sacar muchas veces, incluso cuando no sabía de dónde iba a salir.</p>
+
+    <p>También se me olvida que hay gente que me quiere.</p>
+
+    <p>Y aunque suene duro decirlo, a veces aparece esa pregunta incómoda:</p>
+
+    <p class="pull">¿Quién soy yo para merecer cariño?</p>
+
+    <p>No lo digo para dar lástima. Lo digo porque me ha pasado. Porque hay momentos en los que uno puede tener cariño alrededor y aun así no saber recibirlo. Como si algo por dentro dudara de que eso también puede ser para uno.</p>
+
+    <p>Durante mucho tiempo no me daba cuenta de esa conversación interna. Simplemente la creía. Pensaba que era mi conciencia, mi responsabilidad o mi manera de mantenerme fuerte.</p>
+
+    <p>Pero con el tiempo empecé a verla distinto.</p>
+
+    <p>Empecé a observarla.</p>
+
+    <p>No desde el lugar del que recibe el golpe, sino desde el lugar del observador. Desde ese espacio interno donde uno puede mirar lo que está pasando sin dejarse arrastrar por completo.</p>
+
+    <p>Ahí entendí algo importante: yo no soy todo lo que mi mente me dice cuando estoy herido.</p>
+
+    <p>Esa pausa me ayudó a empezar a separarme de esa voz.</p>
+
+    <p>No fue algo perfecto. Todavía me pasa. Todavía hay días en los que vuelve el látigo, la duda, la dureza, la sensación de no tener nada que dar.</p>
+
+    <p>Pero ahora lo veo más rápido.</p>
+
+    <p>Y de ese proceso nació un libro.</p>
+
+    <p>Mientras escribía ese libro, también empezó a nacer un método. Una forma de mirar esa conversación interna, reconocer las frases del látigo, entender de dónde vienen, ver cuánto cuestan y empezar a hablarme de otra manera.</p>
+
+    <p>Eso es lo que hoy llamo Pausa y Poder.</p>
+
+    <div class="frags">
+      <p>Pausa, porque a veces lo primero que necesitamos es detenernos y observar.</p>
+      <p>Poder, porque cuando dejamos de obedecer automáticamente esa voz dura, recuperamos la posibilidad de elegir distinto.</p>
+    </div>
+
+    <p>También entendí algo más: incluso en los momentos más difíciles, uno puede encontrar algo valioso.</p>
+
+    <p>A veces, cuando más vacío me he sentido, ha aparecido la escritura. La necesidad de poner en palabras lo que siento. La posibilidad de transformar algo que me dolía en algo que puede servirme a mí y, quizás, servirle a alguien más.</p>
+
+    <p>Pausa y Poder nació de ahí.</p>
+
+    <div class="frags">
+      <p>No nació de una teoría.</p>
+      <p>No nació de una pose.</p>
+      <p>No nació porque yo tenga todo resuelto.</p>
+    </div>
+
+    <p>Nació de mi propia experiencia. De mi propia lucha con una forma de hablarme que muchas veces fue injusta, dura y poco amorosa.</p>
+
+    <p>Y también nació de descubrir que, incluso cuando uno se siente roto o vacío, todavía tiene dones. Todavía tiene algo que entregar. Todavía puede usar lo vivido para darle un giro distinto a su historia.</p>
+
+    <div class="frags">
+      <p>No se trata de negar el dolor.</p>
+      <p>Se trata de no dejar que el dolor tenga la última palabra.</p>
+    </div>
+
+    <p>Para mí, Pausa y Poder es eso: detenerme, observar cómo me estoy hablando y recordar que puedo elegir una forma más humana de tratarme.</p>
+
+    <p class="closing">Porque a veces el primer acto de poder es pausar.</p>
+
+  </article>
+</main>
+
+<!-- ── POST FOOTER NAV ── -->
+<nav class="post-nav">
+  <a href="/blog" class="back-link"><span>&#8592;</span>Volver a las reflexiones</a>
+</nav>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <a href="/" class="foot-logo">
+    <svg class="alv-icon" aria-hidden="true"><use href="#alv-sym"/></svg>
+    <span>ARMANDO LA VIDA</span>
+  </a>
+  <div class="foot-social">
+    <a href="https://www.instagram.com/armandolavida/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@armando.la.vida" target="_blank" rel="noopener">TikTok</a>
+    <a href="/#cta">Newsletter</a>
+  </div>
+  <p class="foot-copy">Método Pausa y Poder &nbsp;·&nbsp; © 2026 Armando La Vida</p>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+const nb = document.getElementById('nb');
+addEventListener('scroll', () => nb.classList.toggle('scrolled', scrollY > 60));
+</script>
+</body>
+</html>
