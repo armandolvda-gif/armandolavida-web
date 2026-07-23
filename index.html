@@ -327,14 +327,12 @@ footer{
 
 /* ── ANIMATIONS ─────────────────────────────────────────────────── */
 /*
-  Visible por defecto. El script agrega .js a <html> antes del primer render,
-  lo que activa la animación solo cuando JavaScript está disponible.
-  Si JS falla, el contenido permanece visible.
+  Desactivado (24 jul 2026): el fade-up dependía de que un IntersectionObserver
+  disparara para revelar el contenido, y en al menos un dispositivo real nunca
+  disparó, dejando la página invisible de forma permanente. El contenido ahora
+  es visible siempre, sin depender de JavaScript.
 */
-.fade-up{opacity:1;transform:none;transition:opacity .75s ease,transform .75s ease;}
-.js .fade-up{opacity:0;transform:translateY(22px);}
-.js .fade-up.visible{opacity:1;transform:none;}
-.d1{transition-delay:.08s;}.d2{transition-delay:.18s;}.d3{transition-delay:.28s;}.d4{transition-delay:.38s;}
+.fade-up{opacity:1;transform:none;}
 
 /* ── RESPONSIVE ─────────────────────────────────────────────────── */
 @media(max-width:900px){
@@ -756,26 +754,9 @@ footer{
 </footer>
 
 <script>
-// Activa animaciones solo cuando JS está disponible.
-// Esto asegura que el contenido sea visible si JS falla.
-document.documentElement.classList.add('js');
-
 // Nav scroll
 const nb = document.getElementById('nb');
 addEventListener('scroll', () => nb.classList.toggle('scrolled', scrollY > 60));
-
-// Fade-up observer
-const obs = new IntersectionObserver(
-  es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} }),
-  {threshold:.1}
-);
-document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
-
-// Salvaguarda: si el observer no dispara (dispositivo, extensión, o
-// cualquier otra causa), el contenido no debe quedar invisible para siempre.
-setTimeout(() => {
-  document.querySelectorAll('.fade-up:not(.visible)').forEach(el => el.classList.add('visible'));
-}, 2000);
 
 // ── Kit Integration (endpoint público, sin API key) ──────────────
 // Usa el endpoint de formulario público de Kit — soporta CORS desde browser.
