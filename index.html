@@ -771,6 +771,12 @@ const obs = new IntersectionObserver(
 );
 document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
 
+// Salvaguarda: si el observer no dispara (dispositivo, extensión, o
+// cualquier otra causa), el contenido no debe quedar invisible para siempre.
+setTimeout(() => {
+  document.querySelectorAll('.fade-up:not(.visible)').forEach(el => el.classList.add('visible'));
+}, 2000);
+
 // ── Kit Integration (endpoint público, sin API key) ──────────────
 // Usa el endpoint de formulario público de Kit — soporta CORS desde browser.
 // Si 9687042 es ID de landing page y no de form, obtener el form ID real en
