@@ -352,27 +352,22 @@ footer{
   #strip p{font-size:.6rem;letter-spacing:.1em;}
 }
 
-/* ── BOTTOM NAV (mobile, app-style) ────────────────────────────────── */
-.bottom-nav{
-  display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;
-  background:var(--marfil);
+/* ── NAV SCROLL ROW (mobile, siempre visible, dentro del nav fijo de arriba) ── */
+.nav-scroll{
+  display:none;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;gap:22px;padding-top:12px;margin-top:10px;
   border-top:1px solid var(--oro-line);
-  padding:7px 2px calc(7px + env(safe-area-inset-bottom));
 }
-.bn-item{
-  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:3px;text-decoration:none;color:var(--text-muted);padding:5px 1px;
-  transition:color .2s;
+.nav-scroll::-webkit-scrollbar{display:none;}
+.nav-scroll a{
+  flex:0 0 auto;font-size:.68rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--text-muted);text-decoration:none;white-space:nowrap;padding-bottom:3px;
 }
-.bn-item svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
-.bn-item span{font-size:.5rem;font-weight:500;letter-spacing:.01em;text-align:center;line-height:1.1;white-space:nowrap;}
-.bn-item:active,.bn-item:focus{color:var(--oro);}
-.bn-item.bn-cta{color:var(--carbon);}
-.bn-item.bn-cta svg{stroke:var(--oro);}
+.nav-scroll a.ns-cta{color:var(--oro);font-weight:600;}
 @media(max-width:900px){
-  .bottom-nav{display:flex;}
-  .nav-cta{display:none;}
-  body{padding-bottom:60px;}
+  nav{flex-wrap:wrap;}
+  .nav-scroll{display:flex;}
+  #hero{padding-top:150px;}
 }
 </style>
 </head>
@@ -495,34 +490,14 @@ footer{
     <li><a href="/blog">Reflexiones</a></li>
   </ul>
   <a href="#cta" class="nav-cta">Comenzar</a>
-</nav>
-
-<!-- ── BOTTOM NAV (mobile, app-style) ────────────────────────────── -->
-<nav class="bottom-nav" aria-label="Navegación móvil">
-  <a href="#what" class="bn-item">
-    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg>
-    <span>Método</span>
-  </a>
-  <a href="#pillars" class="bn-item">
-    <svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V9M12 20V9M18 20V9M4 9h16l-8-5-8 5Z"/></svg>
-    <span>Pilares</span>
-  </a>
-  <a href="#hojas" class="bn-item">
-    <svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7Z"/><path d="M14 3v4h4"/><path d="M9.5 13h5M9.5 16h5"/></svg>
-    <span>Hojas</span>
-  </a>
-  <a href="#about" class="bn-item">
-    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.3"/><path d="M5 20c1-4 4-6 7-6s6 2 7 6"/></svg>
-    <span>Armando</span>
-  </a>
-  <a href="/blog" class="bn-item">
-    <svg viewBox="0 0 24 24"><path d="M4 5h16M4 10h16M4 15h10"/></svg>
-    <span>Blog</span>
-  </a>
-  <a href="#cta" class="bn-item bn-cta">
-    <svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-    <span>Comenzar</span>
-  </a>
+  <div class="nav-scroll">
+    <a href="#what">Método</a>
+    <a href="#pillars">Pilares</a>
+    <a href="#hojas">Hojas gratis</a>
+    <a href="#about">Armando</a>
+    <a href="/blog">Blog</a>
+    <a href="#cta" class="ns-cta">Comenzar</a>
+  </div>
 </nav>
 
 <!-- ── HERO ─────────────────────────────────────────────────────────── -->
