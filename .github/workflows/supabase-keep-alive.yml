@@ -1,0 +1,27 @@
+name: Supabase Keep Alive
+
+on:
+  schedule:
+    - cron: '0 8 */5 * *'  # Cada 5 dias a las 8am UTC
+  workflow_dispatch:       # Permite correrlo manualmente desde GitHub Actions
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase - Pausa y Poder
+        env:
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          echo "Activando proyecto Supabase..."
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            "https://acznpbxkwpvttbxzmudq.supabase.co/rest/v1/" \
+            -H "apikey: $SUPABASE_ANON_KEY" \
+            -H "Authorization: Bearer $SUPABASE_ANON_KEY")
+          echo "HTTP status: $STATUS"
+          if [ "$STATUS" = "200" ]; then
+            echo "Proyecto activo."
+          else
+            echo "Status inesperado: $STATUS - revisa que SUPABASE_ANON_KEY este configurada en GitHub Secrets"
+            exit 1
+          fi
