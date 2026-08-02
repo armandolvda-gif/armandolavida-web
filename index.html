@@ -7,6 +7,7 @@
 
 <!-- ── SEO ── -->
 <meta name="description" content="Pausa y Poder es un método de Armando La Vida para dejar de escapar de ti mismo, recuperar claridad y aprender a acompañarte con honestidad."/>
+<link rel="canonical" href="https://www.armandolavida.com/"/>
 
 <!-- ── OPEN GRAPH ── -->
 <meta property="og:title" content="Método Pausa y Poder — Armando La Vida"/>
@@ -377,6 +378,33 @@ nav.scrolled{
   .offer-inner{grid-template-columns:1fr;gap:44px;}
 }
 
+/* ── TESTIMONIOS ────────────────────────────────────────────────── */
+#testimonios{background:var(--marfil3);padding:100px 32px;}
+.test-head{text-align:center;max-width:560px;margin:0 auto 64px;}
+.test-head h2{
+  font-family:var(--serif);font-size:clamp(1.7rem,3.2vw,2.5rem);
+  font-weight:400;letter-spacing:.06em;line-height:1.25;color:var(--carbon);margin-bottom:12px;
+}
+.test-head p{font-size:.9rem;color:var(--text-muted);line-height:1.8;}
+.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;max-width:var(--max);margin:0 auto;}
+.test-card{background:var(--marfil);border-top:2px solid var(--oro);padding:42px 36px 36px;position:relative;}
+.test-card::before{
+  content:'\201C';font-family:var(--serif);font-size:3.2rem;
+  color:var(--oro-dim);position:absolute;top:10px;left:28px;line-height:1;
+}
+.test-card blockquote{
+  font-family:var(--serif);font-size:1rem;font-style:italic;
+  color:var(--carbon);line-height:1.8;margin:34px 0 22px;
+}
+.test-meta{display:flex;align-items:center;gap:12px;}
+.test-avatar{
+  width:38px;height:38px;border-radius:50%;background:var(--piedra);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  font-family:var(--serif);font-size:.85rem;color:var(--text-dim);
+}
+.test-name{font-size:.82rem;color:var(--carbon);font-weight:500;display:block;}
+.test-role{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim);}
+
 /* ── CTA ─────────────────────────────────────────────────────────── */
 #cta{background:var(--carbon);padding:116px 32px;text-align:center;position:relative;overflow:hidden;}
 #cta::before{
@@ -470,6 +498,35 @@ footer{
   footer{justify-content:center;text-align:center;}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.armandolavida.com/#website",
+      "url": "https://www.armandolavida.com/",
+      "name": "Armando La Vida",
+      "description": "Método Pausa y Poder: un camino para dejar de escaparte de ti mismo y aprender a acompañarte con honestidad.",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.armandolavida.com/#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.armandolavida.com/#person",
+      "name": "Armando La Vida",
+      "url": "https://www.armandolavida.com/",
+      "description": "Autor del método Pausa y Poder. Acompaña a personas a reconocer sus patrones internos y recuperar claridad.",
+      "inLanguage": "es",
+      "sameAs": [
+        "https://www.instagram.com/armandolavida"
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -809,6 +866,61 @@ footer{
         <div class="book"><div class="book-bar"></div><div><span class="book-t">Pause and Power</span><span class="book-e">Edición en inglés</span></div></div>
         <div class="book"><div class="book-bar"></div><div><span class="book-t">¿Cuánto cuesta tu atención?</span><span class="book-e">Edición en español</span></div></div>
         <div class="book"><div class="book-bar"></div><div><span class="book-t">The Cost of Your Attention</span><span class="book-e">Edición en inglés</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── TESTIMONIOS ─────────────────────────────────────────────────── -->
+<!--
+  PENDIENTE DE PUBLICAR: seccion construida a pedido de Armando pero sin
+  enlazar en nav/footer todavia -- esperando testimonios reales antes de
+  publicarla. Los 3 bloques de abajo son placeholders estructurales, no
+  copy final. Reemplazar cada uno con una cita real, nombre real (o
+  iniciales si la persona prefiere anonimato) y el contexto real. El
+  contexto puede ser de dos fuentes distintas: lectores de los libros
+  (Contigo hasta el final / Pause and Power, ¿Cuanto cuesta tu atencion? /
+  The Cost of Your Attention) o participantes del Reto Pausa y Poder -- no
+  asumir que todos vienen del Reto. No inventar testimonios -- ver
+  PAUSA_Y_PODER_SPEC.md seccion 6 sobre copy pendiente.
+-->
+<section id="testimonios">
+  <div class="test-head fade-up">
+    <span class="label">Testimonios</span>
+    <h2>Lo que dicen quienes ya lo hicieron</h2>
+    <p>[PLACEHOLDER — bajada opcional, ej. "Voces de lectores y del Reto Pausa y Poder"]</p>
+  </div>
+  <div class="test-grid">
+    <div class="test-card fade-up d1">
+      <blockquote>[PLACEHOLDER — testimonio real pendiente]</blockquote>
+      <div class="test-meta">
+        <div class="test-avatar">?</div>
+        <div>
+          <span class="test-name">[Nombre]</span>
+          <span class="test-role">[Contexto — ej. Lector/a de Contigo hasta el final]</span>
+        </div>
+      </div>
+    </div>
+    <div class="test-card fade-up d2">
+      <blockquote>[PLACEHOLDER — testimonio real pendiente]</blockquote>
+      <div class="test-meta">
+        <div class="test-avatar">?</div>
+        <div>
+          <span class="test-name">[Nombre]</span>
+          <span class="test-role">[Contexto — ej. Reto Pausa y Poder]</span>
+        </div>
+      </div>
+    </div>
+    <div class="test-card fade-up d3">
+      <blockquote>[PLACEHOLDER — testimonio real pendiente]</blockquote>
+      <div class="test-meta">
+        <div class="test-avatar">?</div>
+        <div>
+          <span class="test-name">[Nombre]</span>
+          <span class="test-role">[Contexto — libro o Reto]</span>
+        </div>
       </div>
     </div>
   </div>
