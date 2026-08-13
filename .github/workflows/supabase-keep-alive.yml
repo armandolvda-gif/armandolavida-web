@@ -2,8 +2,8 @@ name: Supabase Keep Alive
 
 on:
   schedule:
-    - cron: '0 8 */5 * *'  # Cada 5 dias a las 8am UTC
-  workflow_dispatch:       # Permite correrlo manualmente desde GitHub Actions
+    - cron: '0 8 */5 * *'
+  workflow_dispatch:
 
 jobs:
   keep-alive:
@@ -22,6 +22,6 @@ jobs:
           if [ "$STATUS" = "200" ]; then
             echo "Proyecto activo."
           else
-            echo "Status inesperado: $STATUS - revisa que SUPABASE_ANON_KEY este configurada en GitHub Secrets"
+            echo "Status inesperado: $STATUS"
             exit 1
           fi
