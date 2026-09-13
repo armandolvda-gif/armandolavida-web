@@ -200,6 +200,12 @@ nav.scrolled{
 .rfi-n{
   font-family:var(--serif);font-size:1rem;font-weight:400;
   color:var(--oro);opacity:.65;flex-shrink:0;min-width:24px;
+  padding-top:2px;
+}
+.rfi strong{
+  display:block;color:rgba(247,244,238,.88);
+  font-family:var(--serif);font-weight:400;font-size:.9rem;letter-spacing:.03em;
+  margin-bottom:1px;
 }
 .rf-box{max-width:560px;margin:0 auto;}
 .rf-row{display:flex;gap:8px;flex-wrap:wrap;}
@@ -702,16 +708,19 @@ footer{
 
 <div class="divider"></div>
 
+<!-- Alias para el QR del libro impreso que apunta a #recurso (sin 's') -->
+<div id="recurso" aria-hidden="true" style="position:relative;height:0;overflow:hidden;visibility:hidden;"></div>
+
 <!-- ── RECURSOS ─────────────────────────────────────────────────────── -->
 <section id="recursos">
   <div class="rf-inner fade-up">
     <span class="label">Recursos gratuitos</span>
-    <h2 class="rf-title">Antes de responder</h2>
-    <p class="rf-sub">Tres hojas de trabajo para reconocer el patrón que te mueve antes de que tomes una decision. Gratis.</p>
+    <h2 class="rf-title">Tres herramientas para el camino</h2>
+    <p class="rf-sub">Las hojas de trabajo de <em>Contigo hasta el final</em>. Para que lo que leíste no se quede en la página.</p>
     <div class="rf-items">
-      <div class="rfi"><span class="rfi-n">01</span><span>Identifica tu modo de escape habitual</span></div>
-      <div class="rfi"><span class="rfi-n">02</span><span>Mapa de tus reacciones bajo presion</span></div>
-      <div class="rfi"><span class="rfi-n">03</span><span>El primer paso hacia la pausa</span></div>
+      <div class="rfi"><span class="rfi-n">01</span><span><strong>La Ficha Diaria</strong><br>30 días de práctica para quedarte contigo. Una entrada por día.</span></div>
+      <div class="rfi"><span class="rfi-n">02</span><span><strong>Diálogo con el Juez Interno</strong><br>Escribe lo que el juez interno te dice. Respóndele.</span></div>
+      <div class="rfi"><span class="rfi-n">03</span><span><strong>El Mapa de Tus Tres Dones</strong><br>Identifica lo que eres, no lo que deberías ser.</span></div>
     </div>
     <div class="rf-box">
       <form class="rf-row" id="rec-form" onsubmit="handleRecForm(event)" novalidate>

@@ -1,0 +1,29 @@
+{
+  "communities": {
+    "0": [
+      "vercel",
+      "vercel_cleanurls",
+      "vercel_trailingslash"
+    ]
+  },
+  "cohesion": {
+    "0": 0.6666666666666666
+  },
+  "gods": [
+    {
+      "id": "vercel_cleanurls",
+      "label": "cleanUrls",
+      "degree": 1
+    },
+    {
+      "id": "vercel_trailingslash",
+      "label": "trailingSlash",
+      "degree": 1
+    }
+  ],
+  "surprises": [],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}
