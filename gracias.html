@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tus hojas de trabajo — Armando La Vida</title>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --marfil:#F7F4EE;
+  --marfil2:#EDE8DF;
+  --carbon:#1A1A1A;
+  --oro:#D4AF37;
+  --oro-dim:rgba(212,175,55,0.18);
+  --oro-line:rgba(212,175,55,0.32);
+  --piedra:#D6D2C9;
+  --text-muted:#7A7060;
+  --serif:'Cinzel',serif;
+  --sans:'Montserrat',sans-serif;
+}
+body{
+  background:var(--marfil);
+  color:var(--carbon);
+  font-family:var(--sans);
+  font-weight:300;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+a{color:inherit;text-decoration:none;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:20px 32px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(247,244,238,0.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--oro-line);
+}
+.nav-brand{
+  font-family:var(--serif);font-size:.9rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--carbon);
+}
+.nav-brand span{color:var(--oro);}
+
+/* ── HERO ── */
+.hero{
+  flex:1;
+  display:flex;align-items:center;justify-content:center;
+  padding:120px 32px 80px;
+  text-align:center;
+}
+.hero-inner{max-width:600px;}
+
+.label{
+  display:block;font-size:.65rem;font-weight:500;
+  letter-spacing:.26em;text-transform:uppercase;
+  color:var(--oro);margin-bottom:20px;
+}
+
+.hero h1{
+  font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.4rem);
+  font-weight:400;letter-spacing:.06em;line-height:1.35;
+  color:var(--carbon);margin-bottom:16px;
+}
+
+.hero p{
+  font-size:.95rem;color:var(--text-muted);
+  max-width:480px;margin:0 auto 48px;
+}
+
+/* ── PDF CARDS ── */
+.pdf-list{
+  display:flex;flex-direction:column;gap:16px;
+  text-align:left;
+}
+
+.pdf-card{
+  display:flex;align-items:flex-start;gap:18px;
+  background:#fff;
+  border:1px solid var(--oro-line);
+  border-radius:6px;
+  padding:22px 24px;
+  transition:border-color .2s,box-shadow .2s;
+}
+.pdf-card:hover{
+  border-color:var(--oro);
+  box-shadow:0 4px 20px rgba(212,175,55,0.12);
+}
+
+.pdf-num{
+  font-family:var(--serif);font-size:.85rem;font-weight:400;
+  color:var(--oro);opacity:.7;flex-shrink:0;padding-top:2px;
+  min-width:22px;
+}
+
+.pdf-body{flex:1;}
+
+.pdf-title{
+  display:block;font-family:var(--serif);font-size:.9rem;
+  font-weight:400;letter-spacing:.05em;color:var(--carbon);
+  margin-bottom:4px;
+}
+
+.pdf-desc{
+  display:block;font-size:.82rem;color:var(--text-muted);
+  margin-bottom:14px;line-height:1.5;
+}
+
+.pdf-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--carbon);color:var(--marfil);
+  font-family:var(--sans);font-size:.72rem;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:9px 18px;border-radius:3px;
+  transition:background .2s,color .2s;
+}
+.pdf-btn:hover{background:var(--oro);color:var(--carbon);}
+
+.pdf-btn svg{width:13px;height:13px;flex-shrink:0;}
+
+/* ── FOOTER NOTE ── */
+.foot-note{
+  text-align:center;padding:48px 32px 40px;
+  font-size:.78rem;color:var(--text-muted);
+  border-top:1px solid var(--oro-dim);
+  margin-top:64px;
+}
+.foot-note a{color:var(--oro);border-bottom:1px solid var(--oro-line);}
+.foot-note a:hover{color:var(--carbon);}
+
+@media(max-width:480px){
+  .hero{padding:100px 20px 60px;}
+  nav{padding:18px 20px;}
+  .pdf-card{padding:18px 16px;gap:12px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/">Armando <span>La Vida</span></a>
+</nav>
+
+<main class="hero">
+  <div class="hero-inner">
+    <span class="label">Contigo hasta el final</span>
+    <h1>Aqui estan tus tres herramientas</h1>
+    <p>Las hojas de trabajo del libro. Para usarlas cuando la motivacion no esta.</p>
+
+    <div class="pdf-list">
+
+      <div class="pdf-card">
+        <span class="pdf-num">01</span>
+        <div class="pdf-body">
+          <span class="pdf-title">La Ficha Diaria</span>
+          <span class="pdf-desc">30 dias de practica para quedarte contigo. Una entrada por dia.</span>
+          <a class="pdf-btn" href="/recursos/ficha-diaria-30-dias.pdf" download>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2v8M5 7l3 3 3-3M3 13h10"/>
+            </svg>
+            Descargar PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="pdf-card">
+        <span class="pdf-num">02</span>
+        <div class="pdf-body">
+          <span class="pdf-title">Dialogo con el Juez Interno</span>
+          <span class="pdf-desc">Escribe lo que el juez interno te dice. Respondele.</span>
+          <a class="pdf-btn" href="/recursos/dialogo-juez-interno.pdf" download>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2v8M5 7l3 3 3-3M3 13h10"/>
+            </svg>
+            Descargar PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="pdf-card">
+        <span class="pdf-num">03</span>
+        <div class="pdf-body">
+          <span class="pdf-title">El Mapa de Tus Tres Dones</span>
+          <span class="pdf-desc">Identifica lo que eres, no lo que deberia ser.</span>
+          <a class="pdf-btn" href="/recursos/mapa-tres-dones.pdf" download>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2v8M5 7l3 3 3-3M3 13h10"/>
+            </svg>
+            Descargar PDF
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="foot-note">
+  <a href="/">Volver a armandolavida.com</a>
+</footer>
+
+</body>
+</html>
