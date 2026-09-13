@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Cuando no tengo que decidir qué viene después — Armando La Vida</title>
+
+<meta name="description" content="A veces no estamos cansados de hacer. Estamos cansados de tener que conducir. Una reflexión sobre el descanso, la oración y confiar."/>
+<link rel="canonical" href="https://www.armandolavida.com/cuando-no-tengo-que-decidir"/>
+
+<meta property="og:title" content="Cuando no tengo que decidir qué viene después"/>
+<meta property="og:description" content="A veces no estamos cansados de hacer. Estamos cansados de tener que conducir."/>
+<meta property="og:image" content="https://www.armandolavida.com/img/armando-og.jpg"/>
+<meta property="og:url" content="https://www.armandolavida.com/cuando-no-tengo-que-decidir"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="es_ES"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Cuando no tengo que decidir qué viene después"/>
+<meta name="twitter:description" content="A veces no estamos cansados de hacer. Estamos cansados de tener que conducir."/>
+<meta name="twitter:image" content="https://www.armandolavida.com/img/armando-og.jpg"/>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet"/>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+:root{
+  --marfil:    #F7F4EE;
+  --marfil2:   #EDE8DF;
+  --carbon:    #1A1A1A;
+  --oro:       #D4AF37;
+  --oro-dim:   rgba(212,175,55,0.18);
+  --oro-line:  rgba(212,175,55,0.32);
+  --piedra:    #D6D2C9;
+  --text-muted:#7A7060;
+  --serif:     'Cinzel', serif;
+  --sans:      'Montserrat', sans-serif;
+}
+body{
+  background:var(--marfil);
+  color:var(--carbon);
+  font-family:var(--sans);
+  font-weight:300;
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--marfil);}
+::-webkit-scrollbar-thumb{background:var(--oro-dim);border-radius:3px;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:20px 40px;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:all .4s;
+}
+nav.scrolled{
+  background:rgba(247,244,238,0.95);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--oro-line);
+  padding:14px 40px;
+}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-wordmark{display:flex;flex-direction:column;line-height:1.15;}
+.nav-wordmark .nm-main{font-family:var(--serif);font-size:.82rem;letter-spacing:.18em;color:var(--carbon);font-weight:400;}
+.nav-wordmark .nm-sub{font-family:var(--serif);font-size:.58rem;letter-spacing:.26em;color:var(--oro);font-weight:400;}
+.nav-back{
+  font-size:.63rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-muted);text-decoration:none;
+  display:flex;align-items:center;gap:8px;transition:color .2s;
+}
+.nav-back:hover{color:var(--oro);}
+.nav-back svg{width:14px;height:14px;}
+
+/* ── ARTICLE LAYOUT ── */
+.article-wrap{
+  max-width:660px;
+  margin:0 auto;
+  padding:130px 32px 100px;
+}
+
+/* Header */
+.post-label{
+  display:block;
+  font-size:.62rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--oro);margin-bottom:20px;
+}
+.post-title{
+  font-family:var(--serif);
+  font-size:clamp(1.7rem,3.5vw,2.5rem);
+  font-weight:400;letter-spacing:.04em;line-height:1.3;
+  color:var(--carbon);margin-bottom:32px;
+}
+.post-rule{width:44px;height:1px;background:var(--oro);margin-bottom:48px;}
+
+/* Body text */
+.post-body p{
+  font-size:1.02rem;
+  line-height:1.9;
+  color:var(--carbon);
+  margin-bottom:1.1em;
+}
+.post-body p.solo{
+  /* short single-line paragraphs */
+  margin-bottom:.45em;
+}
+.post-body .pull{
+  font-family:var(--serif);
+  font-size:1.08rem;
+  font-weight:400;
+  letter-spacing:.02em;
+  color:var(--carbon);
+  border-left:2px solid var(--oro);
+  padding-left:20px;
+  margin:2.4em 0;
+  line-height:1.7;
+}
+
+/* Section titles */
+.post-section{
+  font-family:var(--serif);
+  font-size:.72rem;
+  font-weight:400;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--oro);
+  margin-top:3.2em;
+  margin-bottom:1.6em;
+  opacity:.85;
+}
+
+/* Divider */
+.post-divider{
+  width:100%;height:1px;
+  background:linear-gradient(to right,transparent,var(--oro-line),transparent);
+  margin:3em 0;
+}
+
+/* Footer */
+.post-footer{
+  margin-top:64px;
+  padding-top:32px;
+  border-top:1px solid var(--oro-dim);
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:16px;
+}
+.post-author{
+  font-family:var(--serif);font-size:.78rem;letter-spacing:.12em;
+  color:var(--text-muted);
+}
+.post-cta{
+  display:inline-block;
+  font-size:.63rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--marfil);background:var(--carbon);
+  padding:11px 24px;text-decoration:none;transition:background .25s;
+}
+.post-cta:hover{background:var(--oro);}
+
+@media(max-width:600px){
+  nav{padding:18px 20px;}
+  nav.scrolled{padding:14px 20px;}
+  .article-wrap{padding:110px 20px 80px;}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="/">
+    <div class="nav-wordmark">
+      <span class="nm-main">Armando La Vida</span>
+      <span class="nm-sub">Pausa y Poder</span>
+    </div>
+  </a>
+  <a class="nav-back" href="/">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 3L5 8l5 5"/>
+    </svg>
+    Inicio
+  </a>
+</nav>
+
+<article class="article-wrap">
+
+  <span class="post-label">Reflexión</span>
+  <h1 class="post-title">Cuando no tengo que decidir qué viene después</h1>
+  <div class="post-rule"></div>
+
+  <div class="post-body">
+
+    <p>Cada vez que voy a un rezo me da sueño.</p>
+
+    <p>Me ha pasado en la iglesia, durante novenarios de familiares y en distintos momentos de oración. No hablo de aburrimiento. Me pesan los párpados, me lloran los ojos y siento cómo el cuerpo comienza lentamente a aflojarse.</p>
+
+    <p>Durante mucho tiempo pensé que aquello podía deberse a muchas cosas: falta de concentración, cansancio, alguna reacción al ambiente o incluso una explicación espiritual.</p>
+
+    <p>Hasta que comencé a prestar atención a algo que no parecía tener ninguna relación con la oración.</p>
+
+    <p>También me sucede cuando me cortan el cabello.</p>
+
+    <p>Pero hay un detalle importante.</p>
+
+    <p>No me ocurre mientras espero mi turno.</p>
+
+    <p>Puedo estar sentado en la barbería durante un rato y permanecer perfectamente despierto. Miro alrededor, reviso el teléfono, estoy pendiente de quién entra, de quién sale y de cuándo me corresponde.</p>
+
+    <p class="solo">El sueño aparece después.</p>
+    <p class="solo">Cuando ya estoy sentado en la silla.</p>
+    <p class="solo">Cuando el barbero comienza a trabajar.</p>
+    <p>Entonces los párpados empiezan a pesar.</p>
+
+    <p>Lo mismo me ha sucedido en determinados momentos en consultorios y en otras situaciones donde, durante un rato, alguien más está conduciendo lo que ocurre.</p>
+
+    <p>Y allí apareció una pregunta distinta.</p>
+
+    <p>Quizá el elemento común no sea la oración. Quizá tampoco sea simplemente estar sentado. Ni siquiera descansar. Puede ser algo mucho más específico: durante unos minutos, la próxima acción no depende de mí.</p>
+
+    <div class="post-divider"></div>
+    <h2 class="post-section">La diferencia entre esperar y entregarse al momento</h2>
+
+    <p>Esperar no siempre significa descansar.</p>
+
+    <p>Mientras espero mi turno en una barbería sigo teniendo una responsabilidad muy pequeña, pero real. Tengo que estar atento. Saber cuándo me llaman. Levantarme. Responder. Moverme. La siguiente acción todavía depende de mí.</p>
+
+    <p>Pero una vez que comienza el corte, algo cambia. No tengo que decidir cuál será el próximo movimiento. No necesito anticipar nada. No tengo que dirigir la secuencia. Solo permanecer allí.</p>
+
+    <p>En una oración colectiva sucede algo parecido. Alguien conduce. Existe una secuencia. Una liturgia. Una voz que marca el ritmo. Durante algunos minutos no tengo que decidir qué viene después.</p>
+
+    <p>Y parece que mi cuerpo reconoce esa diferencia mucho antes de que yo la piense. Afloja. Respira distinto. Los ojos comienzan a cerrarse. Aparece el sueño.</p>
+
+    <p>No sé si existe una única explicación para eso. Tampoco necesito convertir una observación personal en una teoría universal.</p>
+
+    <p>Pero el patrón comenzó a resultarme demasiado claro para ignorarlo.</p>
+
+    <p>Mi cuerpo parece relajarse especialmente cuando deja de recaer sobre mí la responsabilidad de decidir la próxima acción. Y eso me hizo pensar en algo bastante más grande que el sueño.</p>
+
+    <div class="post-divider"></div>
+    <h2 class="post-section">Tal vez no estemos cansados solamente de hacer</h2>
+
+    <p>Solemos asociar el cansancio con la cantidad de cosas que hacemos. Trabajamos mucho. Caminamos. Manejamos. Resolvemos problemas. Atendemos llamadas. Respondemos mensajes. Cumplimos compromisos. Y seguramente todo eso cansa.</p>
+
+    <p>Pero existe otra carga mucho menos visible.</p>
+
+    <p>La de conducir permanentemente nuestra propia secuencia.</p>
+
+    <p class="solo">¿Qué hago ahora?</p>
+    <p class="solo">¿Qué sigue?</p>
+    <p class="solo">¿Qué respondo?</p>
+    <p class="solo">¿A quién llamo?</p>
+    <p class="solo">¿Qué problema resuelvo primero?</p>
+    <p class="solo">¿Qué estoy olvidando?</p>
+    <p class="solo">¿Qué pasará después?</p>
+    <p>¿Qué decisión tengo que tomar?</p>
+
+    <p>No necesitamos formular conscientemente todas esas preguntas. Muchas pueden permanecer funcionando en segundo plano. Una especie de vigilancia silenciosa que acompaña buena parte del día.</p>
+
+    <p>Por eso una persona puede estar físicamente quieta y continuar completamente activada. El cuerpo está sentado. La mente sigue de guardia.</p>
+
+    <div class="pull">A veces no estamos cansados de hacer. Estamos cansados de tener que conducir.</div>
+
+    <p>De mantener las manos, metafóricamente, sobre el volante. De calcular constantemente el próximo movimiento. De sentir que siempre hay algo que anticipar.</p>
+
+    <div class="post-divider"></div>
+    <h2 class="post-section">El cuerpo quizá aprovecha cuando puede</h2>
+
+    <p>Tal vez por eso el sueño aparece precisamente cuando alguien más conduce temporalmente la secuencia. No porque yo quiera renunciar a mi autonomía. No porque haya dejado de interesarme lo que sucede. Simplemente porque, durante algunos minutos, ya no tengo que administrar lo que viene después.</p>
+
+    <p>El organismo parece decir: ahora no me necesitan para eso. Entonces puedo aflojar.</p>
+
+    <p>Quizá por eso reconocemos experiencias parecidas en otros momentos: alguien que se queda dormido como acompañante en un automóvil o que empieza a cabecear mientras recibe un masaje.</p>
+
+    <p>No afirmo que todos esos fenómenos tengan la misma explicación. Pero comparten algo interesante: por un momento, no somos nosotros quienes tenemos que conducir.</p>
+
+    <div class="post-divider"></div>
+    <h2 class="post-section">La pausa no siempre significa no hacer nada</h2>
+
+    <p>Esto también cambió mi manera de pensar la pausa.</p>
+
+    <p>Había entendido muchas veces descansar como detener la actividad. Pero quizá una parte importante del descanso consista también en detener temporalmente la necesidad de anticipar.</p>
+
+    <p>Podemos estar inmóviles y continuar completamente tensos. Podemos estar acostados mientras pensamos en diez problemas. Podemos cerrar los ojos mientras organizamos mentalmente el día siguiente. Podemos sentarnos a descansar sin abandonar por un instante el puesto de mando.</p>
+
+    <p>La pausa verdadera quizá necesite algo más que quietud. Puede requerir sentir que, durante unos minutos, no tenemos que estar preparados para lo que sigue.</p>
+
+    <p>Y eso no siempre resulta sencillo. Quienes estamos acostumbrados a resolver podemos terminar confundiendo responsabilidad con vigilancia permanente. Como si descansar demasiado profundamente significara descuidar algo. Como si soltar el control durante unos minutos fuera irresponsable.</p>
+
+    <p>Pero vivir no puede consistir únicamente en conducir. También necesitamos momentos en los que podamos simplemente estar.</p>
+
+    <div class="post-divider"></div>
+    <h2 class="post-section">Tal vez descansar también sea una forma de confiar</h2>
+
+    <p>No creo que la conclusión de todo esto sea que necesitamos dejar nuestras decisiones en manos de otros. Sería exactamente lo contrario.</p>
+
+    <p>Conducir nuestra vida es una responsabilidad que nos pertenece. Pero quizá hemos confundido esa responsabilidad con la necesidad de permanecer permanentemente al volante.</p>
+
+    <p>Hay momentos para decidir. Momentos para actuar. Momentos para sostener. Y también debería haber momentos en los que podamos reconocer que, durante unos minutos, la próxima acción no depende de nosotros.</p>
+
+    <p>Tal vez por eso vuelvo a pensar en la oración. Cuando rezo no desaparecen mis responsabilidades. Los problemas siguen allí. Las decisiones que tendré que tomar continúan esperándome. Pero durante ese momento no tengo que resolverlas. Puedo simplemente permanecer.</p>
+
+    <p>Y hay algo profundamente espiritual en reconocer que el mundo no necesita que yo lo sostenga cada segundo.</p>
+
+    <p class="solo">Hago mi parte.</p>
+    <p class="solo">Asumo lo que me corresponde.</p>
+    <p>Y, por un momento, confío.</p>
+
+    <p>Quizá por eso los párpados comienzan a pesar. Quizá mi cuerpo comprende antes que yo que puede soltar el volante durante unos minutos.</p>
+
+    <div class="pull">Tal vez descansar también sea una forma de confiar.</div>
+
+    <p>Cuando estoy en un rezo o sentado en la silla del barbero y aparece ese conocido peso en los ojos, ya no me resulta tan extraño.</p>
+
+    <p>Quizá mi cuerpo no esté pidiendo que haga algo.</p>
+
+    <p>Quizá, por una vez, esté celebrando que durante unos minutos no tiene que hacerlo.</p>
+
+  </div>
+
+  <div class="post-footer">
+    <span class="post-author">Armando La Vida</span>
+    <a class="post-cta" href="/#recurso">Tus hojas de trabajo</a>
+  </div>
+
+</article>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive: true});
+</script>
+
+</body>
+</html>
